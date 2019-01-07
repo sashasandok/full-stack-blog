@@ -1,0 +1,16 @@
+{
+  "name": "full-stack-blog-server",
+  "version": "1.0.0",
+  "description": "full-stack MERN app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "Alex Sandok",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "nodemon": "^1.18.9"
+  }
+}
