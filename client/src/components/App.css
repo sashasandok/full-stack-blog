@@ -13,11 +13,44 @@
   min-height: 3.5rem;
   width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.app-header h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  height: 100%;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 10rem;
+}
+
+.main-nav a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13rem;
+  height: 70%;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+
+.main-nav a:hover {
+  background-color: #484e58;
+  box-shadow: 2px 2px 4px #73767c;
+}
+
+.main-nav a:first-child {
+  margin-right: 3rem;
 }
 
 .app-content {
