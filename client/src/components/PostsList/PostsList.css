@@ -1,0 +1,14 @@
+.posts-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .posts-list {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}

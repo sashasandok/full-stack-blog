@@ -6,6 +6,7 @@
   align-items: flex-start;
   height: 100vh;
   width: 100vw;
+  font-size: 2vw;
 }
 
 .app-header {
@@ -14,30 +15,31 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.app-header h2 {
+.app-header div {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20rem;
-  height: 100%;
+  width: 25vw;
+  min-height: 100%;
+  margin-right: 25px;
+  /* animation: slide 3.5s ease-in infinite; */
 }
 
 .main-nav {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 10rem;
+  padding-left: 10vw;
 }
 
 .main-nav a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 13rem;
+  width: 13vw;
   height: 70%;
   cursor: pointer;
   color: white;
@@ -50,7 +52,7 @@
 }
 
 .main-nav a:first-child {
-  margin-right: 3rem;
+  margin-right: 3vw;
 }
 
 .app-content {
@@ -58,18 +60,30 @@
   background-color: #788088;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* align-items: center;
+  justify-content: center; */
   color: white;
   flex: 1 0 auto;
+  padding-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
+/* @keyframes slide {
   from {
-    transform: rotate(0deg);
+    margin-left: 90%;
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    margin-left: 0%;
+    opacity: 1;
+  }
+} */
+
+@media (max-width: 768px) {
+  .app {
+    font-size: calc(2vw + 5px);
+  }
+
+  .main-nav a {
+    width: calc(20vw + 15px);
   }
 }
