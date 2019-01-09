@@ -8,7 +8,6 @@ exports.getIndex = (req, res, next) => {
     .catch(err => {
       console.log(err)
     })
-  console.log('Index route')
 }
 
 exports.getPosts = (req, res, next) => {
@@ -19,7 +18,6 @@ exports.getPosts = (req, res, next) => {
     .catch(err => {
       console.log(err)
     })
-  console.log('get Posts')
 }
 
 exports.getPost = (req, res, next) => {
@@ -30,5 +28,19 @@ exports.getPost = (req, res, next) => {
     .catch(err => {
       console.log(err)
     })
-  console.log('get Post by id')
+}
+
+exports.addPost = (req, res, next) => {
+  const title = req.body.title
+  const content = req.body.content
+  const post = new Post({
+    title,
+    content,
+  })
+  post
+    .save()
+    .then(result => {
+      console.log(result)
+    })
+    .catch(err => console.log(err))
 }

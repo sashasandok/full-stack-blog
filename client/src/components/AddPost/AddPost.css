@@ -1,0 +1,72 @@
+.add-new-post-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 78vh;
+  width: 70%;
+}
+
+.add-new-post-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px;
+  width: 100%;
+  min-height: 78vh;
+  font-size: 2vw;
+}
+
+.add-new-post-form input {
+  width: 80%;
+  height: 30px;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 2vw;
+}
+
+.add-new-post-form textarea {
+  width: 80%;
+  border-radius: 5px;
+  resize: none;
+  padding: 5px;
+  font-size: 2vw;
+}
+
+.add-new-post-form button {
+  width: 35%;
+  border-radius: 5px;
+  height: 40px;
+  font-size: 1.5vw;
+}
+
+.add-new-post-form input,
+.add-new-post-form textarea,
+.add-new-post-form button:focus {
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .add-new-post-block {
+    min-height: 50vh;
+    width: 90%;
+  }
+  .add-new-post-form {
+    padding: 10px;
+    width: 100%;
+    min-height: 50vh;
+  }
+
+  .add-new-post-form input {
+    font-size: calc(2vw + 5px);
+  }
+
+  .add-new-post-form textarea {
+    font-size: calc(2vw + 5px);
+  }
+
+  .add-new-post-form button {
+    font-size: calc(1.5vw + 5px);
+  }
+}

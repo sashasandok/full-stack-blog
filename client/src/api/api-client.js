@@ -13,15 +13,18 @@ export const get = endpoint =>
     headers: headers,
   }).then(response => response.json())
 
-export const post = (endpoint, { ...args }, token) =>
+export const post = (endpoint, { ...args }) =>
   fetch(apiUrl(endpoint), {
     method: 'POST',
     headers: {
       ...headers,
-      ...(token && { Authorization: `Bearer ${token}` }),
     },
     body: JSON.stringify(args),
-  }).then(response => response.json())
+  })
+    .then(response => {
+      response.json()
+    })
+    .then(response => console.log(response))
 
 export const put = (endpoint, { ...args }, token) =>
   fetch(apiUrl(endpoint), {

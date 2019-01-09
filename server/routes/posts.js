@@ -10,4 +10,6 @@ router.get('/posts', postController.getPosts)
 
 router.get('/posts/:postId', postController.getPost)
 
+router.post('/add-post', postController.addPost)
+
 module.exports = router
