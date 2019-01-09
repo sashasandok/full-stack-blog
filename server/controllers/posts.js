@@ -1,10 +1,9 @@
 const Post = require('../models/post')
 
 exports.getIndex = (req, res, next) => {
-  res.send('<h1>Index root route</h1>')
   Post.find()
     .then(posts => {
-      console.log(posts)
+      res.send(posts)
     })
     .catch(err => {
       console.log(err)
@@ -13,10 +12,9 @@ exports.getIndex = (req, res, next) => {
 }
 
 exports.getPosts = (req, res, next) => {
-  res.send('<h1>Get many posts route</h1>')
   Post.find()
     .then(posts => {
-      console.log(posts)
+      res.send(posts)
     })
     .catch(err => {
       console.log(err)
@@ -25,6 +23,12 @@ exports.getPosts = (req, res, next) => {
 }
 
 exports.getPost = (req, res, next) => {
-  res.send('<h1>Get one post by id route</h1>')
+  Post.findById('5c34c0f2e7179a7d12412ffe')
+    .then(posts => {
+      res.send(posts)
+    })
+    .catch(err => {
+      console.log(err)
+    })
   console.log('get Post by id')
 }

@@ -6,7 +6,7 @@ import { Link, Switch, BrowserRouter as Router, Route } from 'react-router-dom'
 import './App.css'
 
 // components
-import Posts from './Posts/Posts'
+import PostsList from './PostsList/PostsList'
 import AddPost from './AddPost/AddPost'
 
 class App extends Component {
@@ -23,11 +23,11 @@ class App extends Component {
                 <span>Add New Post</span>
               </Link>
             </nav>
-            <h2>Hello Blog</h2>
+            <div>Hello Blog</div>
           </header>
           <section className="app-content">
             <Switch>
-              <Route exact path="/" component={Posts} />
+              <Route exact path="/" component={PostsList} />
               <Route path="/add-post" component={AddPost} />
             </Switch>
           </section>

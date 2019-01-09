@@ -1,0 +1,20 @@
+.post-card {
+  margin: 20px;
+  padding: 3vw;
+  width: 40vw;
+  height: 400px;
+  background-color: #44484c;
+  box-shadow: 2px 2px 4px #424242;
+  border-radius: 5px;
+}
+
+.post-card:hover {
+  background-color: #44484c;
+  box-shadow: 4px 4px 8px #a6a6a7;
+}
+
+@media (max-width: 768px) {
+  .post-card {
+    width: 80vw;
+  }
+}
