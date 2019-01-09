@@ -23,7 +23,7 @@ class App extends Component {
                 <span>Add New Post</span>
               </Link>
             </nav>
-            <div>Hello Blog</div>
+            <div>Blog 2019</div>
           </header>
           <section className="app-content">
             <Switch>
