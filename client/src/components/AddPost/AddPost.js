@@ -1,5 +1,6 @@
 // react
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 import postApi from '../../api/api-post'
 
@@ -52,6 +53,10 @@ class AddPost extends Component {
       </div>
     )
   }
+}
+
+AddPost.propTypes = {
+  history: PropTypes.instanceOf(Object),
 }
 
 export default AddPost

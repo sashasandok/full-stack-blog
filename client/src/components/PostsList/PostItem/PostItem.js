@@ -20,6 +20,7 @@ const PostItem = props => {
 PostItem.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 }
 
 export default PostItem

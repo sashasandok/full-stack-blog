@@ -92,6 +92,8 @@ EditPost.propTypes = {
   posts: PropTypes.instanceOf(Array),
   post: PropTypes.instanceOf(Object),
   isFetching: PropTypes.bool.isRequired,
+  match: PropTypes.instanceOf(Object),
+  history: PropTypes.instanceOf(Object),
 }
 
 export default connect(
