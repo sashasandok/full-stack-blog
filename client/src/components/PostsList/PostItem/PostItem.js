@@ -1,6 +1,7 @@
 // react
 import React from 'react'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 // styles
 import './PostItem.css'
@@ -14,6 +15,11 @@ const PostItem = props => {
       <p>{props.content}</p>
     </div>
   )
+}
+
+PostItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
 }
 
 export default PostItem
