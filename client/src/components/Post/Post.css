@@ -1,0 +1,33 @@
+.post-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 20px;
+  padding: 3vw;
+  width: 40vw;
+  height: 400px;
+  background-color: #44484c;
+  box-shadow: 2px 2px 4px #424242;
+  border-radius: 5px;
+}
+
+.post-return-btn {
+  width: 100px;
+  height: 30px;
+  border-radius: 7px;
+}
+
+.post-return-btn:active,
+.post-return-btn:focus {
+  outline: none;
+}
+
+.post-return-btn:hover {
+  box-shadow: 1px 1px 2px rgb(121, 121, 121);
+}
+
+@media (max-width: 768px) {
+  .post-card {
+    width: 80vw;
+  }
+}

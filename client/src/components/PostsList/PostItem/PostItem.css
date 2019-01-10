@@ -1,4 +1,4 @@
-.post-card {
+.post-item-card {
   margin: 20px;
   padding: 3vw;
   width: 40vw;
@@ -8,13 +8,23 @@
   border-radius: 5px;
 }
 
-.post-card:hover {
+.post-item-card a {
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+
+.post-item-card a:hover {
+  text-decoration: underline;
+}
+
+.post-item-card:hover {
   background-color: #44484c;
   box-shadow: 4px 4px 8px #a6a6a7;
 }
 
 @media (max-width: 768px) {
-  .post-card {
+  .post-item-card {
     width: 80vw;
   }
 }

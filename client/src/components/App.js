@@ -8,6 +8,7 @@ import './App.css'
 // components
 import PostsList from './PostsList/PostsList'
 import AddPost from './AddPost/AddPost'
+import Post from './Post/Post'
 
 class App extends Component {
   render() {
@@ -29,6 +30,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={PostsList} />
               <Route path="/add-post" component={AddPost} />
+              <Route path="/post/:postId" component={Post} />
             </Switch>
           </section>
         </div>

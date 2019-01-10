@@ -20,7 +20,6 @@ class PostsList extends Component {
 
   render() {
     const { posts } = this.props
-
     return (
       <div className="posts-list">
         <Posts posts={posts} />
@@ -31,7 +30,7 @@ class PostsList extends Component {
 
 const mapStateToProps = state => ({
   isFetching: state.post.isFetching,
-  posts: state.post.items,
+  posts: state.post.items || [],
 })
 
 const mapDispatchToProps = dispatch => ({
