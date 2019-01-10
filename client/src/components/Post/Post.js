@@ -17,8 +17,6 @@ class Post extends Component {
     this.props.getPosts()
   }
 
-  componentDidUpdate = (prevProps, prevState) => {}
-
   render() {
     const { post } = this.props
 

@@ -38,7 +38,7 @@ const mapDispatchToProps = dispatch => ({
   getPosts: () => dispatch(getPosts()),
 })
 
-Posts.propTypes = {
+PostsList.propTypes = {
   getPosts: PropTypes.func.isRequired,
   posts: PropTypes.instanceOf(Array),
   isFetching: PropTypes.bool.isRequired,
