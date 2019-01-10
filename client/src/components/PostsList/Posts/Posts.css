@@ -1,0 +1,12 @@
+.no-posts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 90vh;
+  font-size: 3vw;
+  font-style: italic;
+  color: white;
+  text-shadow: 3px 3px 3px rgb(97, 151, 160);
+}

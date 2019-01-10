@@ -2,22 +2,29 @@
 import React from 'react'
 
 // components
-import Post from '../Post/Post'
+import PostItem from '../PostItem/PostItem'
 
 // utils
 import _ from 'lodash'
 
+// styles
+import './Posts.css'
+
 const Posts = props => {
-  return _.map(props.posts, item => {
-    return (
-      <Post
-        key={item.id}
-        id={item.id}
-        title={item.title}
-        content={item.content}
-      />
-    )
-  })
+  return props.posts.length === 0 ? (
+    <div className="no-posts">You Have No Posts At Yet</div>
+  ) : (
+    _.map(props.posts, item => {
+      return (
+        <PostItem
+          key={item.id}
+          id={item.id}
+          title={item.title}
+          content={item.content}
+        />
+      )
+    })
+  )
 }
 
 export default Posts
