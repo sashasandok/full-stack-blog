@@ -1,6 +1,7 @@
 // react
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 // redux
 import { connect } from 'react-redux'
@@ -50,7 +51,12 @@ const mapDispatchToProps = dispatch => ({
   getPosts: () => dispatch(getPosts()),
 })
 
-// Post.propTypes = {}
+Post.propTypes = {
+  getPosts: PropTypes.func.isRequired,
+  posts: PropTypes.instanceOf(Array),
+  post: PropTypes.instanceOf(Object),
+  isFetching: PropTypes.bool.isRequired,
+}
 
 export default connect(
   mapStateToProps,
