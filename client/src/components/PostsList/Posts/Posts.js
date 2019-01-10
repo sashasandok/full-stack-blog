@@ -1,5 +1,6 @@
 // react
 import React from 'react'
+import PropTypes from 'prop-types'
 
 // components
 import PostItem from '../PostItem/PostItem'
@@ -25,6 +26,10 @@ const Posts = props => {
       )
     })
   )
+}
+
+Posts.propTypes = {
+  posts: PropTypes.instanceOf(Array),
 }
 
 export default Posts
