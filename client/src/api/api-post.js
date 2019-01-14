@@ -1,8 +1,7 @@
-import { get, post } from './api-client'
+import { get, post, del } from './api-client'
 
 export default {
   getPosts: () => get('posts'),
-  addPost: item => {
-    return post('add-post', item)
-  },
+  addPost: item => post('add-post', item),
+  deletePost: id => del(`posts/${id}`),
 }

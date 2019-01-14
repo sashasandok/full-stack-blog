@@ -14,14 +14,12 @@ class AddPost extends Component {
   }
 
   onTitleChange = evt => {
-    console.log(evt.target.value)
     this.setState({
       title: evt.target.value,
     })
   }
 
   onContentChange = evt => {
-    console.log(evt.target.value)
     this.setState({
       content: evt.target.value,
     })
