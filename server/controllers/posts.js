@@ -1,27 +1,7 @@
 const Post = require('../models/post')
 
-exports.getIndex = (req, res, next) => {
-  Post.find()
-    .then(posts => {
-      res.send(posts)
-    })
-    .catch(err => {
-      console.log(err)
-    })
-}
-
 exports.getPosts = (req, res, next) => {
   Post.find()
-    .then(posts => {
-      res.send(posts)
-    })
-    .catch(err => {
-      console.log(err)
-    })
-}
-
-exports.getPost = (req, res, next) => {
-  Post.findById('5c34c0f2e7179a7d12412ffe')
     .then(posts => {
       res.send(posts)
     })
@@ -41,6 +21,16 @@ exports.addPost = (req, res, next) => {
     .save()
     .then(result => {
       console.log(result)
+    })
+    .catch(err => console.log(err))
+}
+
+exports.deletePost = (req, res, next) => {
+  const postId = req.body.postId
+  console.log(req)
+  Post.findOneAndDelete(postId)
+    .then(() => {
+      console.log('DESTROYED PRODUCT')
     })
     .catch(err => console.log(err))
 }

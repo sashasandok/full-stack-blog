@@ -36,11 +36,13 @@ export const put = (endpoint, { ...args }, token) =>
     body: JSON.stringify(args),
   }).then(response => response.json())
 
-export const del = (endpoint, token) =>
+export const del = endpoint =>
   fetch(apiUrl(endpoint), {
     method: 'DELETE',
     headers: {
       ...headers,
-      ...(token && { Authorization: `Bearer ${token}` }),
     },
-  }).then(response => response.status === 200)
+  }).then(response => {
+    console.log(response)
+    return response.status === 200
+  })

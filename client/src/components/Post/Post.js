@@ -9,11 +9,20 @@ import { connect } from 'react-redux'
 // actions
 import { getPosts } from '../../actions/post'
 
+// api
+import postApi from '../../api/api-post'
+
 // styles
 import './Post.css'
 
 class Post extends Component {
   componentDidMount = () => {
+    this.props.getPosts()
+  }
+
+  delete = id => {
+    postApi.deletePost(id)
+    this.props.history.push('/')
     this.props.getPosts()
   }
 
@@ -30,6 +39,12 @@ class Post extends Component {
           <Link to="/">
             <button className="post-return-btn">posts list</button>
           </Link>
+          <button
+            className="post-return-btn"
+            onClick={() => this.delete(post.id)}
+          >
+            delete
+          </button>
         </div>
       </div>
     )
@@ -54,6 +69,7 @@ Post.propTypes = {
   posts: PropTypes.instanceOf(Array),
   post: PropTypes.instanceOf(Object),
   isFetching: PropTypes.bool.isRequired,
+  history: PropTypes.instanceOf(Object),
 }
 
 export default connect(
