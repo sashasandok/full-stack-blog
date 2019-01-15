@@ -16,7 +16,6 @@ import './EditPost.css'
 
 class EditPost extends Component {
   state = {
-    id: null,
     title: '',
     content: '',
   }
@@ -26,14 +25,12 @@ class EditPost extends Component {
   }
 
   onTitleChange = evt => {
-    console.log(evt.target.value)
     this.setState({
       title: evt.target.value,
     })
   }
 
   onContentChange = evt => {
-    console.log(evt.target.value)
     this.setState({
       content: evt.target.value,
     })
@@ -43,27 +40,28 @@ class EditPost extends Component {
     const postId = this.props.match.params.postId
     evt.preventDefault()
     postApi.updatePost({
-      id: postId,
+      postId: postId,
       title: this.state.title,
       content: this.state.content,
     })
     this.props.history.push('/')
+    this.props.getPosts()
   }
+
   render() {
     const { post } = this.props
+
     return (
       <div className="edit-post-block">
         <form className="edit-post-form" onSubmit={this.editPostSubmit}>
           <input
             type="text"
-            placeholder="post title"
             onChange={this.onTitleChange}
             defaultValue={post.title}
           />
           <textarea
             rows="10"
             name="text"
-            placeholder="post content"
             onChange={this.onContentChange}
             defaultValue={post.content}
           />
@@ -76,10 +74,11 @@ class EditPost extends Component {
 
 const mapStateToProps = (state, props) => {
   const postId = props.match.params.postId
+
   return {
     isFetching: state.post.isFetching,
-    posts: state.post.items,
-    post: state.post.items.find(i => i.id === postId),
+    posts: state.post.items || [],
+    post: state.post.items.find(i => i.id === postId) || {},
   }
 }
 

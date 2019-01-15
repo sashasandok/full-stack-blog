@@ -45,6 +45,9 @@ class Post extends Component {
           >
             delete
           </button>
+          <Link to={`/edit-post/${post.id}`}>
+            <button className="post-return-btn">edit</button>
+          </Link>
         </div>
       </div>
     )

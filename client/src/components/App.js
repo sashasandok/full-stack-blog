@@ -9,6 +9,7 @@ import './App.css'
 import PostsList from './PostsList/PostsList'
 import AddPost from './AddPost/AddPost'
 import Post from './Post/Post'
+import EditPost from './EditPost/EditPost'
 
 class App extends Component {
   render() {
@@ -31,6 +32,7 @@ class App extends Component {
               <Route exact path="/" component={PostsList} />
               <Route path="/add-post" component={AddPost} />
               <Route path="/post/:postId" component={Post} />
+              <Route path="/edit-post/:postId" component={EditPost} />
             </Switch>
           </section>
         </div>
