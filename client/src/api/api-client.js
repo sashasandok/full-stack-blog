@@ -20,18 +20,15 @@ export const post = (endpoint, { ...args }) =>
       ...headers,
     },
     body: JSON.stringify(args),
+  }).then(response => {
+    response.json()
   })
-    .then(response => {
-      response.json()
-    })
-    .then(response => console.log(response))
 
-export const put = (endpoint, { ...args }, token) =>
+export const put = (endpoint, { ...args }) =>
   fetch(apiUrl(endpoint), {
     method: 'PUT',
     headers: {
       ...headers,
-      ...(token && { Authorization: `Bearer ${token}` }),
     },
     body: JSON.stringify(args),
   }).then(response => response.json())
@@ -42,7 +39,4 @@ export const del = endpoint =>
     headers: {
       ...headers,
     },
-  }).then(response => {
-    console.log(response)
-    return response.status === 200
-  })
+  }).then(response => response.status === 200)
