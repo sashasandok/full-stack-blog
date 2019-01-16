@@ -1,5 +1,7 @@
 // react
 import React, { Component } from 'react'
+
+// prop-types
 import PropTypes from 'prop-types'
 
 // redux

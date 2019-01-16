@@ -1,13 +1,15 @@
 .posts-list {
-  width: 100%;
+  width: 70vw;
+  font-size: 1.4vw;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
 
 @media (max-width: 768px) {
   .posts-list {
+    font-size: calc(2vw + 5px);
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;

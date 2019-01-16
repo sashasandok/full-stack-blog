@@ -4,35 +4,59 @@
   justify-content: space-between;
   margin: 20px;
   padding: 3vw;
-  width: 40vw;
-  height: 400px;
+  width: 75%;
+  min-height: 300px;
   background-color: #44484c;
-  box-shadow: 2px 2px 4px #424242;
+  box-shadow: 12px 12px 20px #424242;
   border-radius: 5px;
+}
+
+.btns-group {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 30px;
 }
 
 .delete-btn {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background-color: rgba(255, 0, 0, 0.466);
-  position: absolute;
-  right: 30%;
+  background-color: rgba(255, 0, 0, 0.7);
 }
 
-.post-return-btn {
-  width: 100px;
+.edit-btn {
+  width: 70px;
   height: 30px;
   border-radius: 7px;
 }
 
-.post-return-btn:active,
-.post-return-btn:focus {
+.edit-btn:active,
+.delete-btn:active,
+.edit-btn:focus,
+.delete-btn:focus {
   outline: none;
 }
 
-.post-return-btn:hover {
-  box-shadow: 1px 1px 2px rgb(121, 121, 121);
+.delete-btn:hover {
+  cursor: pointer;
+}
+
+.edit-btn:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #44484c;
+  border: 1px solid #777d88;
+}
+
+.delete-btn:hover {
+  color: rgb(255, 0, 0);
+  background-color: #ffffff;
+  border: 1px solid rgba(255, 0, 0, 0.7);
+}
+
+.divider {
+  border: 0.5px solid white;
 }
 
 @media (max-width: 768px) {

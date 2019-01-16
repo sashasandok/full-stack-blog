@@ -60,7 +60,7 @@ class EditPost extends Component {
             defaultValue={post.title}
           />
           <textarea
-            rows="10"
+            rows="7"
             name="text"
             onChange={this.onContentChange}
             defaultValue={post.content}

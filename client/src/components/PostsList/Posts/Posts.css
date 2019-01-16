@@ -4,9 +4,29 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 90vh;
+  min-height: 70vh;
   font-size: 3vw;
   font-style: italic;
   color: white;
   text-shadow: 3px 3px 3px rgb(97, 151, 160);
+}
+
+/* ReactCSSTransitionGroup */
+
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
 }
