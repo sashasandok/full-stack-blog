@@ -17,6 +17,7 @@ const Posts = props => {
   const sortPosts = _.sortBy(props.posts, o => {
     return moment(o.date)
   }).reverse()
+
   return sortPosts.length === 0 ? (
     <div className="no-posts">You Have No Posts At Yet</div>
   ) : (

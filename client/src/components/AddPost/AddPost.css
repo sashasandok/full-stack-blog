@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 78vh;
+  min-height: 65vh;
   width: 70%;
 }
 
@@ -12,10 +12,10 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding: 40px;
+  padding: 20px;
   width: 100%;
-  min-height: 78vh;
-  font-size: 2vw;
+  min-height: 65vh;
+  font-size: 1.5vw;
 }
 
 .add-new-post-form input {
@@ -23,7 +23,7 @@
   height: 30px;
   border-radius: 5px;
   padding: 5px;
-  font-size: 2vw;
+  font-size: 1.5vw;
 }
 
 .add-new-post-form textarea {
@@ -31,14 +31,21 @@
   border-radius: 5px;
   resize: none;
   padding: 5px;
-  font-size: 2vw;
+  font-size: 1.5vw;
 }
 
 .add-new-post-form button {
-  width: 35%;
+  width: 20%;
   border-radius: 5px;
   height: 40px;
   font-size: 1.5vw;
+}
+
+.add-new-post-form button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #44484c;
+  border: 1px solid #44484c;
 }
 
 .add-new-post-form input,
@@ -67,6 +74,7 @@
   }
 
   .add-new-post-form button {
+    width: 40%;
     font-size: calc(1.5vw + 5px);
   }
 }

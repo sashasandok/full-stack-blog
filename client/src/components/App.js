@@ -35,6 +35,12 @@ class App extends Component {
               <Route path="/edit-post/:postId" component={EditPost} />
             </Switch>
           </section>
+          <div className="footer">
+            <p>
+              <span>&#9400;</span>Alex Sandok
+            </p>
+            <p>alex.pro@gmail.com</p>
+          </div>
         </div>
       </Router>
     )

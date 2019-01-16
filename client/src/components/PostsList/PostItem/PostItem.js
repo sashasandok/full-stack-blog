@@ -13,8 +13,13 @@ const PostItem = props => {
       <Link to={`/post/${props.id}`}>
         <h1>{props.title}</h1>
       </Link>
-      <span>{moment(props.date).format('lll')}</span>
-      <p>{props.content}</p>
+      <div className="post-item-divider" />
+      <p className="item-content">{props.content}</p>
+      <div className="date-blok">
+        <p className="item-date">
+          {moment(props.date).format('MMMM Do YYYY, h:mm:ss a')}
+        </p>
+      </div>
     </div>
   )
 }

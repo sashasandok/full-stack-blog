@@ -1,11 +1,28 @@
 .post-item-card {
   margin: 20px;
   padding: 3vw;
-  width: 40vw;
-  height: 400px;
+  width: 75%;
+  height: 40vh;
   background-color: #44484c;
-  box-shadow: 2px 2px 4px #424242;
+  box-shadow: 12px 12px 20px #424242;
   border-radius: 5px;
+}
+
+.item-content {
+  height: 15vh;
+  overflow: hidden;
+  text-align: justify;
+}
+
+.date-blok {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.item-date {
+  text-align: right;
 }
 
 .post-item-card a {
@@ -15,16 +32,21 @@
 }
 
 .post-item-card a:hover {
-  text-decoration: underline;
+  color: rgba(255, 0, 0, 0.7);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .post-item-card:hover {
   background-color: #44484c;
-  box-shadow: 4px 4px 8px #a6a6a7;
+  box-shadow: 12px 12px 20px #454549;
+}
+
+.post-item-divider {
+  border: 0.5px solid white;
 }
 
 @media (max-width: 768px) {
   .post-item-card {
-    width: 80vw;
+    width: 85%;
   }
 }
