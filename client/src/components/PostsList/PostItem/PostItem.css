@@ -1,7 +1,11 @@
 .post-item-card {
-  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 20px;
   padding: 3vw;
-  height: 40vh;
+  width: 85%;
+  min-height: 40vh;
   background-color: #44484c;
   box-shadow: 12px 12px 20px #424242;
   border-radius: 5px;

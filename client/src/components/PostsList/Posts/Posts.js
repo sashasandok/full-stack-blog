@@ -28,6 +28,7 @@ const Posts = props => {
       transitionName="example"
       transitionEnterTimeout={1000}
       transitionLeaveTimeout={700}
+      style={{ width: '100%' }}
     >
       {_.map(sortPosts, item => {
         return (
