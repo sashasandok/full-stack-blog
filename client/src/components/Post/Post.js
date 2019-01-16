@@ -31,20 +31,14 @@ class Post extends Component {
 
     return (
       <div className="post-card">
+        <button className="delete-btn" onClick={() => this.delete(post.id)}>
+          x
+        </button>
         <div>
           <h1>{post.title}</h1>
           <p>{post.content}</p>
         </div>
         <div>
-          <Link to="/">
-            <button className="post-return-btn">posts list</button>
-          </Link>
-          <button
-            className="post-return-btn"
-            onClick={() => this.delete(post.id)}
-          >
-            delete
-          </button>
           <Link to={`/edit-post/${post.id}`}>
             <button className="post-return-btn">edit</button>
           </Link>

@@ -11,6 +11,15 @@
   border-radius: 5px;
 }
 
+.delete-btn {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: rgba(255, 0, 0, 0.466);
+  position: absolute;
+  right: 30%;
+}
+
 .post-return-btn {
   width: 100px;
   height: 30px;
