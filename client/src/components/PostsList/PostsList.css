@@ -1,8 +1,8 @@
 .posts-list {
-  width: 80vw;
+  width: 70vw;
   font-size: 1.4vw;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }

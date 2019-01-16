@@ -1,7 +1,11 @@
 // react
 import React from 'react'
 import { Link } from 'react-router-dom'
+
+// prop-types
 import PropTypes from 'prop-types'
+
+// utils
 import moment from 'moment'
 
 // styles

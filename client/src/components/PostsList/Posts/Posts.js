@@ -1,5 +1,8 @@
 // react
 import React from 'react'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+
+// prop-types
 import PropTypes from 'prop-types'
 
 // components
@@ -21,17 +24,23 @@ const Posts = props => {
   return sortPosts.length === 0 ? (
     <div className="no-posts">You Have No Posts At Yet</div>
   ) : (
-    _.map(sortPosts, item => {
-      return (
-        <PostItem
-          key={item.id}
-          id={item.id}
-          title={item.title}
-          content={item.content}
-          date={item.date}
-        />
-      )
-    })
+    <ReactCSSTransitionGroup
+      transitionName="example"
+      transitionEnterTimeout={1000}
+      transitionLeaveTimeout={700}
+    >
+      {_.map(sortPosts, item => {
+        return (
+          <PostItem
+            key={item.id}
+            id={item.id}
+            title={item.title}
+            content={item.content}
+            date={item.date}
+          />
+        )
+      })}
+    </ReactCSSTransitionGroup>
   )
 }
 
