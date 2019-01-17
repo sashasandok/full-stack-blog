@@ -65,15 +65,40 @@
   }
 
   .edit-post-form input {
-    font-size: calc(2vw + 5px);
+    font-size: calc(2vw + 10px);
   }
 
   .edit-post-form textarea {
-    font-size: calc(2vw + 5px);
+    font-size: calc(2vw + 10px);
   }
 
   .edit-post-form button {
     width: 30%;
-    font-size: calc(2vw + 5px);
+    font-size: calc(2vw + 10px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .edit-post-block {
+    min-height: 50vh;
+    width: 90%;
+  }
+  .edit-post-form {
+    padding: 10px;
+    width: 100%;
+    min-height: 50vh;
+  }
+
+  .edit-post-form input {
+    font-size: calc(2vw + 2px);
+  }
+
+  .edit-post-form textarea {
+    font-size: calc(2vw + 2px);
+  }
+
+  .edit-post-form button {
+    width: 30%;
+    font-size: calc(2vw + 2px);
   }
 }

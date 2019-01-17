@@ -10,7 +10,7 @@
 
 .app-header {
   background-color: #282c34;
-  min-height: 3.5rem;
+  min-height: 10vh;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -25,6 +25,7 @@
   min-height: 100%;
   margin-right: 25px;
   animation: slide 11s ease-in infinite;
+  font-size: 1vw;
 }
 
 .main-nav {
@@ -85,17 +86,20 @@
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   }
   25% {
+    font-size: 3vw;
     color: white;
     opacity: 1;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   }
   50% {
+    font-size: 3vw;
     transform: translateX(0vw);
     color: rgba(255, 0, 0, 0.7);
     opacity: 1;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   }
   100% {
+    font-size: 3vw;
     color: rgba(255, 255, 255, 0.7);
     opacity: 0.01;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -113,5 +117,45 @@
 
   .footer {
     font-size: calc(2vw + 5px);
+  }
+
+  @keyframes slide {
+    0% {
+      color: white;
+      opacity: 0.01;
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+    25% {
+      font-size: 5vw;
+      color: white;
+      opacity: 1;
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+    50% {
+      font-size: 5vw;
+      color: rgba(255, 0, 0, 0.7);
+      opacity: 1;
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+    100% {
+      font-size: 5vw;
+      color: rgba(255, 255, 255, 0.7);
+      opacity: 0.01;
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .app {
+    font-size: calc(2vw + 7px);
+  }
+
+  .main-nav a {
+    width: calc(20vw + 15px);
+  }
+
+  .footer {
+    font-size: calc(2vw + 10px);
   }
 }

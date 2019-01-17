@@ -1,6 +1,9 @@
 // react
-import React from 'react'
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+
+// api
+import postApi from '../../../api/api-post'
 
 // prop-types
 import PropTypes from 'prop-types'
@@ -11,21 +14,34 @@ import moment from 'moment'
 // styles
 import './PostItem.css'
 
-const PostItem = props => {
-  return (
-    <div className="post-item-card">
-      <Link to={`/post/${props.id}`}>
-        <h1>{props.title}</h1>
-      </Link>
-      <div className="post-item-divider" />
-      <p className="item-content">{props.content}</p>
-      <div className="date-blok">
-        <p className="item-date">
-          {moment(props.date).format('MMMM Do YYYY, h:mm:ss a')}
-        </p>
+class PostItem extends Component {
+  delete = id => {
+    postApi.deletePost(id)
+    this.props.getPosts()
+  }
+
+  render() {
+    return (
+      <div className="post-item-card">
+        <button
+          className="delete-btn"
+          onClick={() => this.delete(this.props.id)}
+        >
+          x
+        </button>
+        <Link to={`/post/${this.props.id}`}>
+          <h1>{this.props.title}</h1>
+        </Link>
+        <div className="post-item-divider" />
+        <p className="item-content">{this.props.content}</p>
+        <div className="date-blok">
+          <p className="item-date">
+            {moment(this.props.date).format('MMMM Do YYYY, h:mm:ss a')}
+          </p>
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
 PostItem.propTypes = {
@@ -33,6 +49,7 @@ PostItem.propTypes = {
   content: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
+  getPosts: PropTypes.func.isRequired,
 }
 
 export default PostItem

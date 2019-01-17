@@ -25,7 +25,7 @@ class PostsList extends Component {
     const { posts } = this.props
     return (
       <div className="posts-list">
-        <Posts posts={posts} />
+        <Posts posts={posts} getPosts={() => this.props.getPosts()} />
       </div>
     )
   }
