@@ -38,6 +38,7 @@ const Posts = props => {
             title={item.title}
             content={item.content}
             date={item.date}
+            getPosts={() => props.getPosts()}
           />
         )
       })}
@@ -47,6 +48,7 @@ const Posts = props => {
 
 Posts.propTypes = {
   posts: PropTypes.instanceOf(Array),
+  getPosts: PropTypes.func.isRequired,
 }
 
 export default Posts

@@ -66,15 +66,40 @@
   }
 
   .add-new-post-form input {
-    font-size: calc(2vw + 5px);
+    font-size: calc(1.5vw + 15px);
   }
 
   .add-new-post-form textarea {
-    font-size: calc(2vw + 5px);
+    font-size: calc(1.5vw + 15px);
   }
 
   .add-new-post-form button {
-    width: 40%;
+    width: 30%;
+    font-size: calc(1.5vw + 15px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .add-new-post-block {
+    min-height: 50vh;
+    width: 90%;
+  }
+  .add-new-post-form {
+    padding: 10px;
+    width: 100%;
+    min-height: 50vh;
+  }
+
+  .add-new-post-form input {
+    font-size: calc(1.5vw + 5px);
+  }
+
+  .add-new-post-form textarea {
+    font-size: calc(1.5vw + 5px);
+  }
+
+  .add-new-post-form button {
+    width: 30%;
     font-size: calc(1.5vw + 5px);
   }
 }
